@@ -13,3 +13,7 @@ svg {
 .icons svg {
   color: inherit;
 }
+
+body {
+  padding: 30px;
+}

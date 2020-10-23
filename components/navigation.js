@@ -6,7 +6,7 @@ import {
 	Lists, More, Profile 
 } from "../components/icons"
 import styles from "./navigation.module.css"
-import TitleBold from "./title-bold"
+import TextTitle from "./text-title"
 
 function Navigation({selectedKey}) {
    
@@ -17,42 +17,42 @@ function Navigation({selectedKey}) {
 
 		<NavButton Selected = {String(selectedKey == "home")}>
 			<Home/>
-			<TitleBold>Home</TitleBold>
+			<TextTitle>Home</TextTitle>
 		</NavButton>
 
 		<NavButton Selected = {selectedKey === "explore"}>
 			<Explore/>
-			<TitleBold>Explore</TitleBold>
+			<TextTitle>Explore</TextTitle>
 		</NavButton>
 
 		<NavButton Selected = {selectedKey === "notification"} notify="13">
 			<Notification/>
-			<TitleBold>Notification</TitleBold>
+			<TextTitle>Notification</TextTitle>
 		</NavButton>
 		
 		<NavButton Selected = {selectedKey === "messages"} notify="28">
 			<Messages/>
-			<TitleBold>Messages</TitleBold>
+			<TextTitle>Messages</TextTitle>
 		</NavButton>
 		
 		<NavButton Selected = {selectedKey === "bookmarks"}>
 			<Bookmark/>
-			<TitleBold>Bookmarks</TitleBold>
+			<TextTitle>Bookmarks</TextTitle>
 		</NavButton>
 		
 		<NavButton Selected = {selectedKey === "lists"}>
 			<Lists/>
-			<TitleBold>Lists</TitleBold>
+			<TextTitle>Lists</TextTitle>
 		</NavButton>
 		
 		<NavButton Selected = {selectedKey === "profile"}>
 			<Profile/>
-			<TitleBold>Profile</TitleBold>
+			<TextTitle>Profile</TextTitle>
 		</NavButton>
 		
 		<NavButton Selected = {selectedKey === "more"}>
 			<More/>
-			<TitleBold>More</TitleBold>
+			<TextTitle>More</TextTitle>
 		</NavButton>
 	</nav>
 }
