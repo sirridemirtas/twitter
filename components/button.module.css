@@ -1,0 +1,13 @@
+.button {
+  cursor: pointer;
+  background: transparent;
+}
+
+.button svg {
+  color: inherit;
+}
+
+.button:focus,
+.button:active {
+  outline: none;
+}

@@ -1,0 +1,15 @@
+svg {
+  color: black;
+  font-size: 40px;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 10px;
+  color: white;
+}
+
+.icons svg {
+  color: inherit;
+}

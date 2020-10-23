@@ -1,0 +1,43 @@
+@import "../styles/variables.css";
+
+.button {
+  position: relative;
+  color: var(--c-text-color);
+  border: none;
+  border-radius: 99px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  transition: var(--fade);
+}
+
+.button:hover {
+  background-color: var(--c-theme-20);
+  color: var(--c-theme);
+}
+
+.button svg {
+  color: inherit;
+  font-size: 26px;
+}
+
+.button svg + * {
+  margin-left: 20px;
+  margin-right: 15px;
+}
+
+.button span.notify {
+  top: 5px;
+  left: 20px;
+  background-color: var(--c-theme);
+  position: absolute;
+  height: 17px;
+  border-radius: 17px;
+  padding-left: 6px;
+  padding-right: 6px;
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  border: 1px solid var(--c-primary);
+  color: var(--c-text-color);
+}
