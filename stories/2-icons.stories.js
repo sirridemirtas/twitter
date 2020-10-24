@@ -1,9 +1,14 @@
 import React from 'react';
 import * as Icons from '../components/icons'
+import Avatar from '../components/avatar'
+import ProfileBox from '../components/profile-box';
 
 export default {
   title: 'Icons'
 }
+
+export const AvatarStory = () => <Avatar/>
+export const ProfileBoxStory = () => <ProfileBox/>
 
 export const icn = () => (
   <div className="icons">
