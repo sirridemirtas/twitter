@@ -3,7 +3,7 @@
   flex-shrink: 0;
 }
 
-img {
+.avatar img {
   width: 100%;
   display: block;
   border-radius: 99px;

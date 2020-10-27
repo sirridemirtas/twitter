@@ -4,6 +4,7 @@
   padding-right: 15px;
   padding-left: 15px;
   height: 40px;
+  min-width: 40px;
   font-weight: bold;
 }
 
@@ -18,4 +19,5 @@
 
 .bigSize {
   height: 47px;
+  min-width: 47px;
 }

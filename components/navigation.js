@@ -8,52 +8,29 @@ import {
 import styles from "./navigation.module.css"
 import TextTitle from "./text-title"
 
-function Navigation({selectedKey}) {
-   
+function Navigation({flat = false, selectedKey}) {
+
+	const MENU = [
+		{icon: <Twitter/>},
+		{key: "home", title: "Home", icon: <Home/>},
+		{key: "explore", title: "Explore", icon: <Explore/>},
+		{key: "notification", title: "Notification", icon: <Notification/>, notify: 22},
+		{key: "messages", title: "Messages", icon: <Messages/>, notify: 38},
+		{key: "bookrmarks", title: "Bookmarks", icon: <Bookmark/>},
+		{key: "lists", title: "Lists", icon: <Lists/>},
+		{key: "profile", title: "Profile", icon: <Profile/>},
+		{key: "more", title: "More", icon: <More/>}
+	]
+
+	
 	return <nav className={styles.nav}>
-		<NavButton>
-			<Twitter/>
-		</NavButton>
-
-		<NavButton Selected = {String(selectedKey == "home")}>
-			<Home/>
-			<TextTitle>Home</TextTitle>
-		</NavButton>
-
-		<NavButton Selected = {selectedKey === "explore"}>
-			<Explore/>
-			<TextTitle>Explore</TextTitle>
-		</NavButton>
-
-		<NavButton Selected = {selectedKey === "notification"} notify="13">
-			<Notification/>
-			<TextTitle>Notification</TextTitle>
-		</NavButton>
-		
-		<NavButton Selected = {selectedKey === "messages"} notify="28">
-			<Messages/>
-			<TextTitle>Messages</TextTitle>
-		</NavButton>
-		
-		<NavButton Selected = {selectedKey === "bookmarks"}>
-			<Bookmark/>
-			<TextTitle>Bookmarks</TextTitle>
-		</NavButton>
-		
-		<NavButton Selected = {selectedKey === "lists"}>
-			<Lists/>
-			<TextTitle>Lists</TextTitle>
-		</NavButton>
-		
-		<NavButton Selected = {selectedKey === "profile"}>
-			<Profile/>
-			<TextTitle>Profile</TextTitle>
-		</NavButton>
-		
-		<NavButton Selected = {selectedKey === "more"}>
-			<More/>
-			<TextTitle>More</TextTitle>
-		</NavButton>
+		{MENU.map(menu => (
+			<NavButton Selected = {String(selectedKey == menu.key)}
+			notify = {menu.notify && menu.notify} >
+				{menu.icon}
+				{(menu.title && !flat) && <TextTitle>{menu.title}</TextTitle>}
+			</NavButton>
+		))}
 	</nav>
 }
 

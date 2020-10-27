@@ -5,8 +5,8 @@ import styles from "./nav-button.module.css"
 
 function NavButton({notify, selected, children, ...props}) {
     return <Button type="button" className={cn(styles.button, selected && styles.selected)} {...props}>
-        {children}
         {notify && <span className={styles.notify}>{notify}</span>}
+        {children}
     </Button>
 }
 
