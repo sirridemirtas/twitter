@@ -1,4 +1,10 @@
-.nav button + button {
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.navButton + .navButton {
   margin-top: 8px;
 }
 

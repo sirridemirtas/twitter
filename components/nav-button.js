@@ -3,8 +3,10 @@ import cn from "classnames"
 import Button from "./button.js"
 import styles from "./nav-button.module.css"
 
-function NavButton({notify, selected, children, ...props}) {
-    return <Button type="button" className={cn(styles.button, selected && styles.selected)} {...props}>
+function NavButton({href, notify, selected, className, children, ...props}) {
+    return <Button
+    className={cn(styles.button, selected && styles.selected, className) }
+    {...props} href = {href}>
         {notify && <span className={styles.notify}>{notify}</span>}
         {children}
     </Button>

@@ -6,14 +6,19 @@ import { ArrowBottom } from "./icons"
 import Button from "./button"
 import TextBody from "./text-body"
 
-function ProfileBox({name= "Sırrı Demirtaş", username="srrdmrts"}) {
+function ProfileBox({name= "Sırrı Demirtaş", username="srrdmrts", flat = false}) {
     return <Button className={cn(styles.box)}>
-        <Avatar />
-        <div className={styles.body}>
-            <TextBody bold>{name}</TextBody>
-            <TextBody className={styles.username}>@{username}</TextBody>
-        </div>
-        <ArrowBottom className={styles.icon}/>
+        <Avatar size={39}/>
+       {!flat && (
+           <>
+            <div className={styles.body}>
+                <TextBody bold>{name}</TextBody>
+                <TextBody className={styles.username}>@{username}</TextBody>
+            </div>
+            <ArrowBottom className={styles.icon}/>
+            </>
+        )} 
+        
     </Button>
 }
 
