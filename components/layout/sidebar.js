@@ -8,7 +8,7 @@ import { Tweet } from "../icons"
 
 function Sidebar({flat}) {
     return <div className = {cn(styles.sidebar)} >
-      <Navigation flat = {flat} selectedKey = "home"/>
+      <Navigation flat = {flat}/>
 
       <div className={styles.tweet}>
         <ThemeButton big full = { !flat }>{

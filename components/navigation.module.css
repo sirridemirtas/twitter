@@ -8,6 +8,6 @@
   margin-top: 8px;
 }
 
-.nav button[selected="true"] {
+.navButton[selected="true"] {
   color: var(--c-theme);
 }
