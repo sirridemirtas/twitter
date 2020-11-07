@@ -29,3 +29,15 @@
 	border: 1px solid var(--c-primary);
 	color: var(--c-text-color);
 }
+
+html[theme="light"] .button:global(.twitter) {
+	color: var(--c-theme);
+}
+html[theme="dim"] .button:global(.twitter),
+html[theme="dark"] .button:global(.twitter) {
+	color: white;
+}
+
+html[theme="light"] .notify{
+	color: white;
+}

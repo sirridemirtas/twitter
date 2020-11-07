@@ -1,0 +1,17 @@
+.container {
+	font-size: 16px;
+	padding: 20px;
+}
+
+.container label{
+	margin-right: 16px;
+	text-transform: capitalize;
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.container input[type="radio"]{
+	cursor: inherit;
+	margin-right: 8px;
+}

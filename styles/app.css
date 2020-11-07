@@ -17,3 +17,8 @@ body {
 	background-color: var(--c-primary);
 	color: var(--c-text-color);
 }
+
+input[type="radio"]{
+	height: 1em;
+	width: 1em;
+}
