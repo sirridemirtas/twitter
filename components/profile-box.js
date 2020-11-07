@@ -7,19 +7,19 @@ import Button from "./button"
 import TextBody from "./text-body"
 
 function ProfileBox({name= "Sırrı Demirtaş", username="srrdmrts", flat = false}) {
-    return <Button className={cn(styles.box)}>
-        <Avatar size={39}/>
-       {!flat && (
-           <>
-            <div className={styles.body}>
-                <TextBody bold>{name}</TextBody>
-                <TextBody className={styles.username}>@{username}</TextBody>
-            </div>
-            <ArrowBottom className={styles.icon}/>
-            </>
-        )} 
-        
-    </Button>
+	return <Button className={cn(styles.box)}>
+		<Avatar size={39}/>
+		{!flat && (
+			<>
+			<div className={styles.body}>
+				<TextBody bold>{name}</TextBody>
+				<TextBody className={styles.username}>@{username}</TextBody>
+			</div>
+			<ArrowBottom className={styles.icon}/>
+			</>
+		)} 
+		
+	</Button>
 }
 
 export default ProfileBox

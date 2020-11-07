@@ -1,25 +1,25 @@
 .button {
-  cursor: pointer;
-  background: transparent;
-  color: var(--c-text-color);
-  border-radius: 99px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--fade);
-  text-decoration: none;
+	cursor: pointer;
+	background: transparent;
+	color: var(--c-text-color);
+	border-radius: 99px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: var(--fade);
+	text-decoration: none;
 }
 
 .button:hover {
-  background-color: var(--c-theme-10);
-  color: var(--c-theme);
+	background-color: var(--c-theme-10);
+	color: var(--c-theme);
 }
 
 .button svg {
-  color: inherit;
+	color: inherit;
 }
 
 .button:focus,
 .button:active {
-  outline: none;
+	outline: none;
 }

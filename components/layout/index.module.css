@@ -1,21 +1,21 @@
 .layout {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  height: 100vh;
-  max-width: 670px;
-  margin-left: auto;
-  margin-right: auto;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	height: 100vh;
+	max-width: 670px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @media screen and (min-width: 960px) {
-  .layout {
-    max-width: 1060px;
-    grid-template-columns: auto 1fr 300px;
-  }
+	.layout {
+		max-width: 1060px;
+		grid-template-columns: auto 1fr 300px;
+	}
 }
 
 @media screen and (min-width: 1260px) {
-  .layout {
-    max-width: 1260px;
-  }
+	.layout {
+		max-width: 1260px;
+	}
 }

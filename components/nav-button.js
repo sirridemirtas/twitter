@@ -4,12 +4,12 @@ import Button from "./button.js"
 import styles from "./nav-button.module.css"
 
 function NavButton({href, notify, selected, className, children, ...props}) {
-    return <Button
-    className={cn(styles.button, selected && styles.selected, className) }
-    {...props} href = {href}>
-        {notify && <span className={styles.notify}>{notify}</span>}
-        {children}
-    </Button>
+	return <Button
+	className={cn(styles.button, selected && styles.selected, className) }
+	{...props} href = {href}>
+		{notify && <span className={styles.notify}>{notify}</span>}
+		{children}
+	</Button>
 }
 
 export default NavButton

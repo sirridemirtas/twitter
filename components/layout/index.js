@@ -10,12 +10,12 @@ import CONSTS from '../../constants/index'
 
 
 function Layout({children}) {
-    const size = useWindowSize();
-    return <div className={cn(styles.layout)}>
-        <Sidebar flat={size.width < CONSTS.DESKTOP_SIZE}></Sidebar>
-        <Main>{children}</Main>
-        {size.width > CONSTS.TABLET_SIZE && <Extra>extra</Extra>}
-    </div>
+	const size = useWindowSize();
+	return <div className={cn(styles.layout)}>
+		<Sidebar flat={size.width < CONSTS.DESKTOP_SIZE}></Sidebar>
+		<Main>{children}</Main>
+		{size.width > CONSTS.TABLET_SIZE && <Extra>extra</Extra>}
+	</div>
 }
 
 export default Layout

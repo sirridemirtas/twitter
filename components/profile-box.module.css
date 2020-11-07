@@ -1,24 +1,24 @@
 .box {
-  padding: 10px;
-  text-align: left;
+	padding: 10px;
+	text-align: left;
 }
 
 .box:hover {
-  color: inherit;
+	color: inherit;
 }
 
 .body {
-  margin-left: 10px;
+	margin-left: 10px;
 
-  margin-right: 20px;
+	margin-right: 20px;
 }
 
 .icon {
-  width: 16px;
-  margin-left: auto;
-  color: inherit;
+	width: 16px;
+	margin-left: auto;
+	color: inherit;
 }
 
 .username {
-  color: var(--c-gray);
+	color: var(--c-gray);
 }

@@ -1,13 +1,13 @@
 .nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 .navButton + .navButton {
-  margin-top: 8px;
+	margin-top: 8px;
 }
 
 .navButton[selected="true"] {
-  color: var(--c-theme);
+	color: var(--c-theme);
 }

@@ -1,23 +1,23 @@
 .button {
-  background-color: var(--c-theme);
-  color: var(--c-text-color);
-  padding-right: 15px;
-  padding-left: 15px;
-  height: 40px;
-  min-width: 40px;
-  font-weight: bold;
+	background-color: var(--c-theme);
+	color: var(--c-text-color);
+	padding-right: 15px;
+	padding-left: 15px;
+	height: 40px;
+	min-width: 40px;
+	font-weight: bold;
 }
 
 .button:hover {
-  background-color: var(--c-theme);
-  color: var(--c-text-color);
+	background-color: var(--c-theme);
+	color: var(--c-text-color);
 }
 
 .fullWidth {
-  width: 100% !important;
+	width: 100% !important;
 }
 
 .bigSize {
-  height: 47px;
-  min-width: 47px;
+	height: 47px;
+	min-width: 47px;
 }
