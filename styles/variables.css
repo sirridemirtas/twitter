@@ -8,6 +8,11 @@ html[theme="light"], :root {
 	--c-text-color: #000;
 
 	--fade: 120ms;
+
+	--green: rgb(23, 191, 99);
+	--green-10: rgb(23, 191, 99, 0.1);
+	--pink: rgb(224, 36, 94);
+	--pink-10: rgba(224, 36, 94, 0.1);
 }
 
 html[theme="dark"]:root {

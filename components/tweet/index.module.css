@@ -2,9 +2,15 @@
 	display: grid;
 	grid-template-areas: "avatar body";
 	grid-template-columns: 50px 1fr;
-	grid-gap: 15px;
+	grid-gap: 8px;
 	padding: 12px 15px;
+	padding-bottom: 3px;
 	border-bottom: 1px solid var(--c-border-color);
+	cursor: pointer;
+}
+
+.tweet:hover {
+	background-color: rgba(128, 128, 128, .1);
 }
 
 .avatar {
@@ -59,4 +65,14 @@
 	left: 100%;
 	padding-left: 2px;
 	font-size: 13px;
+}
+
+.retweet:hover {
+	color: var( --green);
+	background-color: var(--green-10);
+}
+
+.like:hover {
+	color: var(--pink);
+	background-color: var(--pink-10);
 }
