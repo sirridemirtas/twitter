@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"dependencies": {
 		"classnames": "^2.2.6",
+		"date-fns": "^2.16.1",
 		"next": "^9.5.5",
 		"postcss-loader": "^4.0.4",
 		"postcss-nested": "^5.0.1",

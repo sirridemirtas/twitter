@@ -15,7 +15,7 @@ html[theme="dark"]:root {
 	--c-border-color: #2f3336;
 	--c-gray: #6e767d;
 	--c-dark-gray: #202327;
-	--c-text-color: #fff;
+	--c-text-color: rgb(217, 217, 217);
 }
 
 html[theme="dim"]:root {

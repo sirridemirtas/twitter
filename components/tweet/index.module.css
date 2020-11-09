@@ -1,0 +1,62 @@
+.tweet {
+	display: grid;
+	grid-template-areas: "avatar body";
+	grid-template-columns: 50px 1fr;
+	grid-gap: 15px;
+	padding: 12px 15px;
+	border-bottom: 1px solid var(--c-border-color);
+}
+
+.avatar {
+	grid-area: avatar;
+}
+
+.body {
+	grid-area: body;
+}
+
+.header {
+	color: var(--c-gray);
+}
+
+.name {
+	color: var(--c-text-color);
+	font-weight: bold;
+}
+
+.content {
+	white-space: pre-wrap;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.footer {
+	display: flex;
+	align-items: center;
+}
+
+.footerButton {
+	flex: 1;
+}
+
+.footerButton:first-child {
+	margin-left: -8px;
+}
+
+.actionButton {
+	color: var(--c-gray);
+	position: relative;
+	display: grid;
+	align-items: center;
+}
+
+.actionButton svg {
+	font-size: 19px;
+}
+
+.actionButton span {
+	position: absolute;
+	left: 100%;
+	padding-left: 2px;
+	font-size: 13px;
+}
