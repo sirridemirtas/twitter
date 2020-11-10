@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react"
-import StoreContext from "../store";
+import StoreContext from "../../../store";
 import styles from "./theme-select.module.css"
 
 function ThemeSelect() {

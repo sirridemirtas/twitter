@@ -1,6 +1,6 @@
 import React from "react"
 import cn from "classnames"
-import Button from "./button"
+import Button from "../Button"
 import styles from "./icon-button.module.css"
 
 function IconButton({ children, className, ...props }) {

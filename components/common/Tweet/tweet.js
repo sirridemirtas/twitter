@@ -1,9 +1,9 @@
 import React from 'react'
 import { formatDistanceToNowStrict } from "date-fns"
-import Avatar from '../avatar'
-import styles from './index.module.css'
-import IconButton from '../icon-button'
-import { Reply, Retweet, Like, Share } from '../icons'
+import Avatar from '../Avatar'
+import styles from './tweet.module.css'
+import IconButton from '../../ui/IconButton'
+import { Reply, Retweet, Like, Share } from '../../icons'
 
 function Tweet({ name, slug, datetime, children }) {
 	return <article className={styles.tweet}>

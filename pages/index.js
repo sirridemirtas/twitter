@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout/"
-import Tweet from "../components/tweet"
+import Tweet from "../components/common/Tweet"
 
 function HomePage() {
 	return <Layout>

@@ -1,7 +1,7 @@
 import React from "react"
 import { useRouter } from 'next/router'
 import cn from "classnames"
-import NavButton from "./nav-button.js"
+import NavButton from "../../ui/NavigationButton/index.js"
 import {
 	Twitter, Home, Explore,
 	Notification, Messages, Bookmark,
@@ -9,9 +9,9 @@ import {
 	HomeFill, ExplorerFill,
 	NotificationFill, MessagesFill,
 	BookmarkFill, ListsFill, ProfileFill
-} from "../components/icons"
+} from "../../icons"
 import styles from "./navigation.module.css"
-import TextTitle from "./text-title"
+import TextTitle from "../../ui/TextTitle"
 
 function Navigation({ flat = false, selectedKey }) {
 	const MENU = [
