@@ -7,13 +7,17 @@ import Main from './cols/main'
 import Extra from './cols/extra'
 import useWindowSize from "../../hooks/useWindowSize"
 import CONSTS from '../../constants/index'
+import PageTitle from "../common/PageTitle/page-title"
 
 
-function Layout({ children }) {
+function Layout({ children, ...props }) {
 	const size = useWindowSize();
 	return <div className={cn(styles.layout)}>
 		<Sidebar flat={size.width < CONSTS.DESKTOP_SIZE}></Sidebar>
-		<Main>{children}</Main>
+		<Main>
+			{props.pageTitle && <PageTitle>{props.pageTitle}</PageTitle>}
+			{children}
+		</Main>
 		{size.width > CONSTS.TABLET_SIZE && <Extra>extra</Extra>}
 	</div>
 }

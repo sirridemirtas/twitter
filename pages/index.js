@@ -3,7 +3,7 @@ import Layout from "../components/layout/"
 import Tweet from "../components/common/Tweet"
 
 function HomePage() {
-	return <Layout>
+	return <Layout pageTitle={"Home"}>
 		<Tweet
 			name={"Sırrı Demirtaş"}
 			slug={"sirridemirtas"}

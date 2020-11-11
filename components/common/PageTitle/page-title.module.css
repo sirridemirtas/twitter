@@ -1,0 +1,8 @@
+.pageTitle {
+	font-weight: bold;
+	border-bottom: 1px solid var(--c-border-color);
+	min-height: 37px;
+	padding: 8px 15px;
+	display: flex;
+	align-items: center;
+}
