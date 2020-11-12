@@ -1,0 +1,56 @@
+.trendTopics {
+	background-color: var(--c-box-color);
+	width: 100%;
+	border-radius: 16px;
+	margin-top: 16px;
+}
+
+.header {
+	padding: 11px 15px;
+	border-bottom: 1px solid var(--c-border-color);
+	font-weight: bolder;
+}
+
+.body {
+	display: flex;
+	flex-direction: column;
+}
+
+.body a {
+	color: inherit;
+	padding: 10px 15px;
+	border-bottom: 1px solid var(--c-border-color);
+	text-decoration: none;
+	font-weight: bold !important;
+	display: flex;
+	flex-direction: column;
+}
+
+.body a:hover {
+	background-color: rgba(128, 128, 128, .1);
+}
+
+.body a:last-child {
+	border: none;
+	border-radius: 16px;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+}
+
+.ranking, .count {
+	font-size: 13px;
+	font-weight: normal;
+	padding-bottom: 8px;
+	color: var(--c-gray);
+}
+
+.count {
+	padding-bottom: 0;
+	padding-top: 8px;
+}
+
+.more {
+	color: var(--c-theme);
+	padding: 4px 2px;
+	font-weight: normal;
+}

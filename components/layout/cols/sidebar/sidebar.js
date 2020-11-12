@@ -1,4 +1,4 @@
-import React, { Children } from "react"
+import React from "react"
 import cn from "classnames"
 import styles from "./sidebar.module.css"
 import Navigation from '../../../common/Navigation'
@@ -9,7 +9,6 @@ import TweetModal from "../../../common/TweetModal/tweet-modal"
 
 function Sidebar({ flat }) {
 	const [modalVisible, setModalVisibility] = React.useState(false)
-
 
 	return <div className={cn(styles.sidebar)} >
 		<Navigation flat={flat} />

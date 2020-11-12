@@ -8,7 +8,8 @@ import Extra from './cols/extra'
 import useWindowSize from "../../hooks/useWindowSize"
 import CONSTS from '../../constants/index'
 import PageTitle from "../common/PageTitle/page-title"
-
+import TrendTopics from "../common/TrendTopics"
+import SearchBox from "../common/SearchBox/search-box"
 
 function Layout({ children, ...props }) {
 	const size = useWindowSize();
@@ -18,7 +19,10 @@ function Layout({ children, ...props }) {
 			{props.pageTitle && <PageTitle>{props.pageTitle}</PageTitle>}
 			{children}
 		</Main>
-		{size.width > CONSTS.TABLET_SIZE && <Extra>extra</Extra>}
+		{size.width > CONSTS.TABLET_SIZE && <Extra>
+			<SearchBox />
+			<TrendTopics />
+		</Extra>}
 	</div>
 }
 

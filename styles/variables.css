@@ -7,6 +7,9 @@ html[theme="light"], :root {
 	--c-dark-gray: #202327;
 	--c-text-color: #000;
 
+	--c-box-color: rgb(245, 248, 250);
+	--c-input-bg: rgb(229, 236, 241);
+
 	--fade: 120ms;
 
 	--green: rgb(23, 191, 99);
@@ -21,6 +24,9 @@ html[theme="dark"]:root {
 	--c-gray: #6e767d;
 	--c-dark-gray: #202327;
 	--c-text-color: rgb(217, 217, 217);
+
+	--c-box-color: rgb(32, 35, 39);
+	--c-input-bg: rgb(20, 24, 28);
 }
 
 html[theme="dim"]:root {
@@ -29,5 +35,8 @@ html[theme="dim"]:root {
 	--c-gray: #6e767d;
 	--c-dark-gray: #202327;
 	--c-text-color: #fff;
+
+	--c-box-color: rgb(22, 39, 53);
+	--c-input-bg: rgb(34, 51, 66);
 }
 

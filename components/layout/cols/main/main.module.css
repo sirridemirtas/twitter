@@ -2,4 +2,5 @@
 	border-width: 0 1px;
 	border-style: solid;
 	border-color: var(--c-border-color);
+	max-width: 600px;
 }

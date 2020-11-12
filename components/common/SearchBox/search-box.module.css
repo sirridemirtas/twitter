@@ -1,0 +1,34 @@
+.container {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: stretch;
+	border-radius: 32px;
+	background-color: var(--c-input-bg);
+	height: 39px;
+	border: 1px solid transparent;
+	position: relative;
+}
+
+.input {
+	flex: 1;
+	background-color: transparent;
+	outline: none;
+	color: var(--c-text-color);
+}
+
+.icon {
+	color: var(--c-gray);
+	width: 19px;
+	height: 19px;
+	padding: 10px;
+	margin-left: 4px;
+}
+
+.input:focus + .icon {
+	color: var(--c-theme);
+}
+
+.container:focus-within {
+	border-color: var(--c-theme);
+	background-color: transparent;
+}
