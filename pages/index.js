@@ -1,23 +1,20 @@
 import React from "react"
+import useSWR from "swr"
+import fetcher from "../helpers/fetcher"
+
 import Layout from "../components/layout/"
 import Tweet from "../components/common/Tweet"
 
 function HomePage() {
-	return <Layout pageTitle={"Home"}>
-		<Tweet
-			name={"Sırrı Demirtaş"}
-			slug={"sirridemirtas"}
-			datetime={new Date("2020-11-09")}
-		>{`Hello World!
-			Every    Body`}
-		</Tweet>
+	const { data, error } = useSWR("/api/tweets", fetcher)
 
-		<Tweet
-			name={"Sırrı Demirtaş"}
-			slug={"sirridemirtas"}
-			datetime={new Date("2020-11-09")}
-		>{`Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eos beatae ipsam molestias.`}
-		</Tweet>
+	return <Layout pageTitle={"Home"}>
+		{!data && "Loading..."}
+
+		{data?.map(tweet => {
+			return <Tweet key={tweet.id} {...tweet} />
+		})}
+
 	</Layout>
 }
 

@@ -5,4 +5,8 @@
 	padding: 8px 15px;
 	display: flex;
 	align-items: center;
+	position: sticky;
+	top: 0;
+	background-color: var(--c-primary);
+	z-index: 6;
 }

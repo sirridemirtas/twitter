@@ -6,23 +6,22 @@
 	"dependencies": {
 		"classnames": "^2.2.6",
 		"date-fns": "^2.16.1",
+		"lorem-ipsum": "^2.0.3",
 		"next": "^9.5.5",
-		"postcss-loader": "^4.0.4",
-		"postcss-nested": "^5.0.1",
 		"react": "^16.14.0",
-		"react-dom": "^16.14.0"
+		"react-dom": "^16.14.0",
+		"swr": "^0.3.8"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.3",
-		"@storybook/addon-actions": "^6.0.26",
-		"@storybook/addon-essentials": "^6.0.26",
-		"@storybook/addon-knobs": "^6.0.27",
-		"@storybook/addon-links": "^6.0.26",
-		"@storybook/react": "^6.0.26",
+		"@storybook/addon-actions": "^6.0.28",
+		"@storybook/addon-essentials": "^6.0.28",
+		"@storybook/addon-knobs": "^6.0.28",
+		"@storybook/addon-links": "^6.0.28",
+		"@storybook/react": "^6.0.28",
 		"@svgr/cli": "^5.4.0",
-		"babel-loader": "^8.1.0",
-		"css-loader": "^5.0.0",
-		"postcss": "^8.1.2",
+		"babel-loader": "^8.2.1",
+		"css-loader": "^5.0.1",
 		"react-is": "^16.13.1",
 		"style-loader": "^2.0.0"
 	},

@@ -1,47 +1,57 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { formatDistanceToNowStrict } from "date-fns"
 import Avatar from '../Avatar'
 import styles from './tweet.module.css'
 import IconButton from '../../ui/IconButton'
-import { Reply, Retweet, Like, Share } from '../../icons'
+import { Reply, Retweet, RetweetFill, Like, LikeFill, Share } from '../../icons'
 
-function Tweet({ name, slug, datetime, children }) {
+function Tweet({ ...props }) {
+	const [favorite, setFavorite] = React.useState(props.favorited)
+	const [retweet, setRetweet] = React.useState(props.retweeted)
+
 	return <article className={styles.tweet}>
 		<div className={styles.avatar}>
-			<Avatar></Avatar>
+			<Avatar randomPhoto={true} />
 		</div>
 		<div className={styles.body}>
 			<header class={styles.header}>
-				<span className={styles.name}>{name} </span>
-				<span>{`@`}{slug} {`·`} </span>
-				<span>{formatDistanceToNowStrict(datetime)}</span>
+				<span className={styles.name}>{props.name} </span>
+				<span>{`@`}{props.slug} {`·`} </span>
+				<span>{formatDistanceToNowStrict(props.datetime)}</span>
 			</header>
 
-			<div className={styles.content}>{children}</div>
+			<div className={styles.content}>{props.tweet}</div>
 
 			<footer className={styles.footer}>
 				<div className={styles.footerButton}>
 					<IconButton className={styles.actionButton}>
-						<Reply></Reply>
+						<Reply />
 					</IconButton>
 				</div>
 
 				<div className={styles.footerButton}>
-					<IconButton className={[styles.actionButton, styles.retweet]}>
-						<Retweet></Retweet>
-						<span>12</span>
+					<IconButton className={[styles.actionButton, styles.retweet]}
+						onClick={() => setRetweet(!retweet)}>
+						{retweet ? <RetweetFill style={{ color: "var(--green)" }} /> : <Retweet />}
+						<span className={retweet && styles.retweeted}>
+							{props.retweetCount || (retweet ? 1 : "")}
+						</span>
 					</IconButton>
 				</div>
 
 				<div className={styles.footerButton}>
-					<IconButton className={[styles.actionButton, styles.like]}>
-						<Like></Like>
+					<IconButton className={[styles.actionButton, styles.like]}
+						onClick={() => setFavorite(!favorite)} >
+						{favorite ? <LikeFill style={{ color: "var(--pink)" }} /> : <Like />}
+						<span className={favorite && styles.liked}>
+							{props.favoriteCount || (favorite ? 1 : "")}
+						</span>
 					</IconButton>
 				</div>
 
 				<div className={styles.footerButton}>
 					<IconButton className={styles.actionButton}>
-						<Share></Share>
+						<Share />
 					</IconButton>
 				</div>
 			</footer>
