@@ -1,0 +1,12 @@
+@keyframes spinner {
+	to {transform: rotate(360deg);}
+}
+
+.spinner {
+	font-size: 24px;
+	animation: spinner .6s linear infinite;
+	text-align: center;
+	margin: auto;
+	width: 100%;
+	margin: 1em;
+}
