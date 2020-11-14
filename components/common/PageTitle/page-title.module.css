@@ -8,5 +8,5 @@
 	position: sticky;
 	top: 0;
 	background-color: var(--c-primary);
-	z-index: 6;
+	z-index: 1;
 }

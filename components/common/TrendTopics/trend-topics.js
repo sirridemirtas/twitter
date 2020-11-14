@@ -32,7 +32,7 @@ function TrendTopics({ children }) {
 
 		<div className={styles.body}>
 			{trends.map((trend, index) => {
-				return <a href="">
+				return <a href="#" key={index}>
 					<span className={styles.ranking}>{
 						(index + 1) + " · " + trend.topic + " · Trending"
 					}</span>

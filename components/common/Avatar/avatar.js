@@ -4,13 +4,12 @@ import randomGradient from "../../../helpers/randomGradient"
 import styles from "./avatar.module.css"
 
 function Avatar({
-	src = "https://vercel.com/api/www/avatar/55ed9f33b2933e09f3aabb57b21ddf289a49d5ea?s=204",
-	alt, size = 47,
-	randomPhoto = false
+	src = null,
+	alt, size = 47
 }) {
 	let img = [];
 
-	if (randomPhoto) {
+	if (!src) {
 		img = <div className={styles.fakePhoto}
 			style={{ background: randomGradient() }}>
 		</div >;

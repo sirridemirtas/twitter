@@ -15,6 +15,6 @@
 	display: block;
 	border-radius: 99px;
 	background-color: var(--c-box-color);
-	backdrop-filter: blur(10px);
-	opacity: .82;
+	backdrop-filter: blur(50px);
+	/* opacity: .82; */
 }

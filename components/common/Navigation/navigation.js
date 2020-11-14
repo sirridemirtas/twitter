@@ -29,7 +29,7 @@ function Navigation({ flat = false, selectedKey }) {
 	const router = useRouter()
 	return <nav className={styles.nav}>
 		{MENU.map(menu => (
-			<NavButton Selected={String(router.pathname == menu.path)}
+			<NavButton key={menu.key} isSelected={router.pathname == menu.path}
 				href={menu.path}
 				notify={menu.notify}
 				className={cn(styles.navButton, menu.key)}>

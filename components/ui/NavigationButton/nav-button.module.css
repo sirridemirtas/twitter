@@ -30,6 +30,10 @@
 	color: var(--c-text-color);
 }
 
+.selected {
+	color : var(--c-theme);
+}
+
 html[theme="light"] .button:global(.twitter) {
 	color: var(--c-theme);
 }

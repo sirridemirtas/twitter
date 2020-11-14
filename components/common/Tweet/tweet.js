@@ -11,10 +11,10 @@ function Tweet({ ...props }) {
 
 	return <article className={styles.tweet}>
 		<div className={styles.avatar}>
-			<Avatar randomPhoto={true} />
+			<Avatar src={props.src} />
 		</div>
 		<div className={styles.body}>
-			<header class={styles.header}>
+			<header className={styles.header}>
 				<span className={styles.name}>{props.name} </span>
 				<span>{`@`}{props.slug} {`·`} </span>
 				<span>{formatDistanceToNowStrict(props.datetime)}</span>
@@ -33,7 +33,7 @@ function Tweet({ ...props }) {
 					<IconButton className={[styles.actionButton, styles.retweet]}
 						onClick={() => setRetweet(!retweet)}>
 						{retweet ? <RetweetFill style={{ color: "var(--green)" }} /> : <Retweet />}
-						<span className={retweet && styles.retweeted}>
+						<span className={retweet ? styles.retweeted : ""}>
 							{props.retweetCount || (retweet ? 1 : "")}
 						</span>
 					</IconButton>
@@ -43,7 +43,7 @@ function Tweet({ ...props }) {
 					<IconButton className={[styles.actionButton, styles.like]}
 						onClick={() => setFavorite(!favorite)} >
 						{favorite ? <LikeFill style={{ color: "var(--pink)" }} /> : <Like />}
-						<span className={favorite && styles.liked}>
+						<span className={favorite ? styles.liked : ""}>
 							{props.favoriteCount || (favorite ? 1 : "")}
 						</span>
 					</IconButton>
