@@ -26,14 +26,23 @@
 	color: var(--c-gray);
 }
 
+.userLink {
+	text-decoration: none;
+	color: inherit;
+}
+
+.userLink:hover .name{
+	text-decoration: underline;
+}
+
 .name {
 	color: var(--c-text-color);
 	font-weight: bold;
 	text-transform: capitalize;
 }
 
-.name:hover{
-	text-decoration: underline;
+.styles.slug {
+	color: inherit;
 }
 
 .content {

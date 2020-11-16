@@ -1,9 +1,9 @@
 import '../styles/app.css';
 import { useState } from 'react';
-import StoreContext from "../store";
+import AppContext from "../store/AppContext";
 import { useEffect } from 'react';
 
-export default function MyApp({ Component, pageProps }) {
+export default function TwitterCloneApp({ Component, pageProps }) {
 	const [theme, themeSet] = useState(null)
 
 	useEffect(() => {
@@ -20,7 +20,7 @@ export default function MyApp({ Component, pageProps }) {
 		document.querySelector("html").setAttribute("theme", theme)
 	}, [theme])
 
-	return <StoreContext.Provider value={{ theme, changeTheme }}>
+	return <AppContext.Provider value={{ theme, changeTheme }}>
 		<Component {...pageProps} />
-	</StoreContext.Provider>
+	</AppContext.Provider>
 }

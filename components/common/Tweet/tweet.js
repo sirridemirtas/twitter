@@ -1,24 +1,29 @@
+import React, { useContext } from "react"
 import { formatDistanceToNowStrict } from "date-fns"
 import Avatar from '../Avatar'
 import styles from './tweet.module.css'
 import TweetFooter from '../TweetFooter'
+import TweetContext from "../../../store/TweetContext"
 
-function Tweet({ ...props }) {
+function Tweet() {
+	const tweet = useContext(TweetContext)
 
 	return <article className={styles.tweet}>
 		<div className={styles.avatar}>
-			<Avatar src={props.src} />
+			<Avatar src={tweet.src} />
 		</div>
 		<div className={styles.body}>
 			<header className={styles.header}>
-				<span className={styles.name}>{props.name} </span>
-				<span>{`@`}{props.slug} {`·`} </span>
-				<span>{formatDistanceToNowStrict(props.datetime)}</span>
+				<a href="javacript:void(0)" className={styles.userLink}>
+					<span className={styles.name}>{tweet.name}</span>
+					<span className={styles.slug}> {`@`}{tweet.slug} {`·`} </span>
+				</a>
+				<span>{formatDistanceToNowStrict(tweet.datetime)}</span>
 			</header>
 
-			<div className={styles.content}>{props.tweet}</div>
+			<div className={styles.content}>{tweet.tweet}</div>
 
-			<TweetFooter {...props} />
+			<TweetFooter />
 		</div>
 	</article >
 }

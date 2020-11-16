@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './tweet-footer.module.css'
 import IconButton from '../../ui/IconButton'
 import { Reply, Retweet, RetweetFill, Like, LikeFill, Share } from '../../icons'
+import TweetContext from '../../../store/TweetContext'
 
-function TweetFooter({ ...props }) {
-	const [favorite, setFavorite] = React.useState(props.favorited)
-	const [retweet, setRetweet] = React.useState(props.retweeted)
+function TweetFooter() {
+	const tweet = useContext(TweetContext)
+
+	const [favorite, setFavorite] = React.useState(tweet.favorited)
+	const [retweet, setRetweet] = React.useState(tweet.retweeted)
 
 	return <footer className={styles.footer}>
 		<div className={styles.footerButton}>
@@ -19,7 +22,7 @@ function TweetFooter({ ...props }) {
 				onClick={() => setRetweet(!retweet)}>
 				{retweet ? <RetweetFill style={{ color: "var(--green)" }} /> : <Retweet />}
 				<span className={retweet ? styles.retweeted : ""}>
-					{props.retweetCount || (retweet ? 1 : "")}
+					{tweet.retweetCount || (retweet ? 1 : "")}
 				</span>
 			</IconButton>
 		</div>
@@ -29,7 +32,7 @@ function TweetFooter({ ...props }) {
 				onClick={() => setFavorite(!favorite)} >
 				{favorite ? <LikeFill style={{ color: "var(--pink)" }} /> : <Like />}
 				<span className={favorite ? styles.liked : ""}>
-					{props.favoriteCount || (favorite ? 1 : "")}
+					{tweet.favoriteCount || (favorite ? 1 : "")}
 				</span>
 			</IconButton>
 		</div>
