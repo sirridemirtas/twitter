@@ -3,10 +3,10 @@ import { formatDistanceToNowStrict } from "date-fns"
 import Avatar from '../Avatar'
 import styles from './tweet.module.css'
 import TweetFooter from '../TweetFooter'
-import TweetContext from "../../../store/TweetContext"
+import Context from "../../../store/TweetContext"
 
 function Tweet() {
-	const tweet = useContext(TweetContext)
+	const tweet = useContext(Context)
 
 	return <article className={styles.tweet}>
 		<div className={styles.avatar}>
