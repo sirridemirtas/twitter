@@ -3,10 +3,6 @@
 	left: 0; right: 0;
 	top:0; bottom: 0;
 	background-color: rgba(128, 128, 128, .4);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 23;
 }
 
 .modal {
@@ -15,11 +11,15 @@
 	grid-template-columns: 50px 1fr;
 	grid-gap: 8px;
 	padding: 24px;
+	padding-bottom: 10px;
 	width: 100%;
-	max-width: 600px;
+	max-width: 550px;
 	border-bottom: 1px solid var(--c-border-color);
 	background-color: var(--c-primary);
 	border-radius: 18px;
+	position: sticky;
+	margin: auto;
+	margin-top: 5vh;
 }
 
 .avatar {
@@ -42,9 +42,20 @@
 .footer {
 	display: flex;
 	justify-content: flex-end;
+	position: relative;
 }
 
 .close {
 	margin-right: 16px;
 	color: var(--c-gray);
+}
+
+.buttons {
+	display: inline-flex;
+	left: 0;
+	position: absolute;
+}
+
+.buttons svg {
+	color: var(--c-theme);
 }
