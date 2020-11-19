@@ -8,7 +8,7 @@ import TextBody from "../../ui/TextBody"
 
 function ProfileBox({ name = "Sırrı Demirtaş", username = "srrdmrts", flat = false }) {
 	return <Button className={cn(styles.box)}>
-		<Avatar size={39} />
+		<Avatar size={39} src="/avatar.png" />
 		{!flat && (
 			<>
 				<div className={styles.body}>

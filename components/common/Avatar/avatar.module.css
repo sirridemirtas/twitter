@@ -16,5 +16,9 @@
 	border-radius: 99px;
 	background-color: var(--c-box-color);
 	backdrop-filter: blur(50px);
-	/* opacity: .82; */
+	background-image: url("../../../icons/profile-fill.svg");
+	background-size: 75% 75%;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: var(--c-gray);
 }

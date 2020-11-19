@@ -5,7 +5,7 @@ import styles from "./avatar.module.css"
 
 function Avatar({
 	src = null,
-	alt, size = 47
+	alt = null, size = 47
 }) {
 	let img = [];
 

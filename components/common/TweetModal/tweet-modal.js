@@ -9,12 +9,13 @@ function TweetModal({ onClick = () => { } }) {
 	return <div className={styles.overlay}>
 		<div className={styles.modal}>
 			<div className={styles.avatar}>
-				<Avatar />
+				<Avatar src="/avatar.png" />
 			</div>
 
 			<div className={styles.body}>
 				<textarea className={styles.textarea} rows="5"
-					placeHolder={"What's happening?"} />
+					placeholder={"What's happening?"}
+					maxLength="280" />
 				<div className={styles.footer}>
 					<div className={styles.buttons}>
 						<IconButton><SvgMedia /></IconButton>
