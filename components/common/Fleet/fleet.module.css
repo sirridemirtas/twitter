@@ -1,0 +1,26 @@
+.button {
+	outline: none;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	color: var(--c-gray);
+	font-size: 82%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.avatar {
+	box-sizing: border-box;
+	border: 1px solid var(--c-primary);
+	box-shadow: 0 0 0 2px var(--c-theme);
+}
+
+.slug {
+	margin-top: 8px;
+	max-width: 58px;
+	overflow: hidden;
+	white-space: nowrap;;
+	text-overflow: ellipsis;
+}

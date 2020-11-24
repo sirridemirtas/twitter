@@ -1,0 +1,10 @@
+.wrapper {
+	padding: 12px 15px; 
+	border-bottom: 1px solid var(--c-border-color);
+	overflow-x: auto;
+	overflow-y: hidden;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	min-height: 74px;
+}
