@@ -3,18 +3,15 @@ import cn from "classnames"
 import randomGradient from "../../../helpers/randomGradient"
 import styles from "./avatar.module.css"
 
-function Avatar({
-	src = null,
-	alt = null, size = 47
-}) {
+function Avatar({ src = null, alt = null, size = 47, className }) {
 	let img = [];
 
 	if (!src) {
-		img = <div className={styles.fakePhoto}
+		img = <div className={cn(styles.fakePhoto, className)}
 			style={{ background: randomGradient() }}>
-		</div >;
+		</div>
 	} else {
-		img = <img src={src} alt={alt} className={styles.img} />
+		img = <img src={src} alt={alt} className={cn(styles.img, className)} />
 	}
 
 	return <div className={cn(styles.avatar)}

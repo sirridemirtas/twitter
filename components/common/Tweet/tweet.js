@@ -25,7 +25,7 @@ function Tweet() {
 
 			<TweetFooter />
 		</div>
-	</article >
+	</article>
 }
 
 export default Tweet

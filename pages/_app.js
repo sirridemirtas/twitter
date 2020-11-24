@@ -1,7 +1,6 @@
-import '../styles/app.css';
-import { useState } from 'react';
-import AppContext from "../store/AppContext";
-import { useEffect } from 'react';
+import { useState, useEffect } from "react"
+import AppContext from "../store/AppContext"
+import "../styles/app.css"
 
 export default function TwitterCloneApp({ Component, pageProps }) {
 	const [theme, themeSet] = useState(null)

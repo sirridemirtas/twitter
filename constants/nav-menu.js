@@ -33,7 +33,7 @@ export const MENU =
 			path: "/notification",
 			title: "Notifications",
 			icon: <Notification />,
-			notify: (new Date()).getSeconds() || "",
+			notify: (new Date()).getDate() || "",
 			iconSelected: <NotificationFill />,
 		},
 		{
@@ -41,7 +41,7 @@ export const MENU =
 			path: "/messages",
 			title: "Messages",
 			icon: <Messages />,
-			notify: (new Date()).getMinutes() || "",
+			notify: (new Date()).getMonth() + 1 || "",
 			iconSelected: <MessagesFill />,
 		},
 		{
