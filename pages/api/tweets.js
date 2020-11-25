@@ -1,5 +1,6 @@
 import url from "url"
 import { LoremIpsum } from "lorem-ipsum"
+import { v4 } from "uuid"
 import randomNumber from "../../helpers/randomNumber"
 
 const lorem = new LoremIpsum({
@@ -19,7 +20,7 @@ export function generateTweets(limit) {
 
 	for (let i = 1; i <= limit; i++) {
 		tweets.push({
-			id: i,
+			id: v4(),
 			name: lorem.generateWords(2),
 			slug: lorem.generateWords(1),
 			tweet: lorem.generateSentences(randomNumber(1, 4)),

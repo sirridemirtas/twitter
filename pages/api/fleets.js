@@ -1,5 +1,6 @@
 import url from "url"
 import { LoremIpsum } from "lorem-ipsum"
+import { v4 } from "uuid"
 
 const lorem = new LoremIpsum();
 
@@ -10,7 +11,7 @@ export function generateFleets(limit) {
 	for (let i = 1; i <= limit; i++) {
 		fleets.push(
 			{
-				id: i,
+				id: v4(),
 				slug: lorem.generateWords(1),
 				pp: null
 			}
