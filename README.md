@@ -1,2 +1,2 @@
-# Twitter Web Clone With ReacJS & NextJS
+# Twitter Web App Clone With ReactJS & NextJS
 
