@@ -1,0 +1,23 @@
+.wrapper {
+	margin-top: 18px;
+	padding: 0 15px;
+	font-size: 13px;
+
+	display: inline-flex;
+	gap: 10px;
+	row-gap: 6px;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+	color: var(--c-gray);
+	text-decoration: none;
+}
+
+.link {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
