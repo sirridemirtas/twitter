@@ -1,10 +1,16 @@
-import React, { Children } from "react"
+import React from "react"
 import cn from "classnames"
+
+import TrendTopics from "../../../common/TrendTopics"
+import SearchBox from "../../../common/SearchBox"
+import FooterLinks from "../../../common/FooterLinks"
 import styles from "./extra.module.css"
 
-function Extra({ children }) {
+function Extra() {
 	return <div className={cn(styles.extra)}>
-		{children}
+		<SearchBox />
+		<TrendTopics />
+		<FooterLinks />
 	</div>
 }
 
